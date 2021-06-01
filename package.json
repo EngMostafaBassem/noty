@@ -7,8 +7,7 @@
     "node": "14.15.3"
   },
   "scripts": {
-    "start":"nodemon app.js",
-    "build": "webpack"
+    "start":"app.js" 
   },
   "author": "MB",
   "license": "ISC",
