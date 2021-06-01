@@ -24,11 +24,8 @@ app.use(session({
   }))
 //setup Routes
 app.get("/",(req,res)=>{
-  if(req.session._id){
-    res.redirect("/main")
-   }  else{
-  res.render("login")
-}
+  res.end('test')
+
  
 })
 app.use(userRoutes)
