@@ -8,7 +8,7 @@ const app=express()
 // initial setup
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use(express.static(__dirname+"../Public"))
+app.use(express.static(path.join(__dirname,"Public")))
 app.set("view engine","ejs")
 // MongoDB setup
 
@@ -23,7 +23,14 @@ app.use(session({
    
   }))
 //setup Routes
-
+app.get("/",(req,res)=>{
+  if(req.session._id){
+    res.redirect("/main")
+   }  else{
+  res.render("login")
+}
+ 
+})
 app.use(userRoutes)
 app.use(noteRoutes)
 
