@@ -23,6 +23,9 @@ app.use(session({
    
   }))
 //setup Routes
+app.get("/",(res,res)=>{
+  res.end("test")
+})
 app.use("/",userRoutes)
 app.use(noteRoutes)
 
