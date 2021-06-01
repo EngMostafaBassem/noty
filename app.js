@@ -9,14 +9,15 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.static(path.join(__dirname,"Public")))
 app.set("view engine","ejs")
 // MongoDB setup
-/*
-mongoose.connect('mongodb://localhost/NoteDB', {useNewUrlParser: true, useUnifiedTopology: true});
+
+mongoose.connect('mongodb+srv://dbfcis:j4MQgkB76feFW7y@cluster0.a5rkl.mongodb.net/NoteDB?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log("we are connected")
 });
-*/
+
 //setup Session
 app.use(session({
     secret: 'lionomo',
@@ -25,8 +26,8 @@ app.use(session({
    
   }))
 //setup Routes
-//app.use(require("./Routes/user.Routes"))
-//app.use(require("./Routes/note.Routes"))
+app.use(require("./Routes/user.Routes"))
+app.use(require("./Routes/note.Routes"))
 app.get("/",(req,res)=>{
   res.send("hello from note app")
 })
