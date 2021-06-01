@@ -1,6 +1,5 @@
 const userContoller=require("../Controllers/User.controller")
 const userRouter=require("express").Router()
-const AuthMidlwares=require("../Midlewares/Auth")
 userRouter.get("/",userContoller.LoginPage)
 userRouter.get("/register",userContoller.RegisterPage)
 userRouter.get("/LogOut",userContoller.LogOut)
