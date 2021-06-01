@@ -1,6 +1,8 @@
 const express=require("express")
 const path=require("path")
 const mongoose=require("mongoose")
+const userRoutes=require('./Routes/user.Routes')
+const noteRoutes=require("./Routes/note.Routes")
 var session = require('express-session')
 const app=express()
 // initial setup
@@ -21,9 +23,7 @@ app.use(session({
    
   }))
 //setup Routes
-//app.use(require("./Routes/user.Routes"))
-//app.use(require("./Routes/note.Routes"))
-app.get((req,res)=>{
-  res.send("test")
-})
+app.use(userRoutes)
+app.use(noteRoutes)
+
 app.listen(process.env.PORT||3000)
