@@ -26,4 +26,4 @@ app.use(session({
 //setup Routes
 app.use(require("./Routes/user.Routes"))
 app.use(require("./Routes/note.Routes"))
-app.listen(3000)
+app.listen(process.env.PORT||3000)
