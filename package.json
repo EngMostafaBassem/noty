@@ -8,8 +8,7 @@
   },
   "scripts": {
     "start":"nodemon app.js",
-    "build": "ng build",
-    "heroku-postbuild": "ng build --prod" 
+    "build": "webpack"
   },
   "author": "MB",
   "license": "ISC",
