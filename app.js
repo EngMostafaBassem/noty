@@ -1,8 +1,8 @@
 const express=require("express")
 const path=require("path")
 const mongoose=require("mongoose")
-const userRoutes=require('./routes/user.Routes')
-const noteRoutes=require("./routes/note.Routes")
+//const userRoutes=require('./routes/user.Routes')
+//const noteRoutes=require("./routes/note.Routes")
 var session = require('express-session')
 const app=express()
 // initial setup
