@@ -1,4 +1,4 @@
-const Note=require('../Models/Note.model')
+const Note=require('../models/Note')
 exports.AddNote=(userId,note)=>new Promise( async(resolve,error)=>{
     try{
         const {_id,...rest}=note
@@ -8,7 +8,6 @@ exports.AddNote=(userId,note)=>new Promise( async(resolve,error)=>{
     catch(ex){
         error(ex)
     }  
-
 
 })
 

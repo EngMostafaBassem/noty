@@ -1,4 +1,4 @@
-const UserRepos=require('../Repos/User.repos')
+const UserRepos=require('../repos/User.')
 const { validationResult } = require('express-validator')
 exports.LoginPage=(req,res)=>{
    if(req.session._id){

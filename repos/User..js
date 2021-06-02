@@ -1,4 +1,4 @@
-const User=require("../Models/User.model")
+const User=require("../models/User")
 const bcyrpt=require("bcrypt")
 exports.saveUser=(user)=>new Promise(async(resolve,error)=>{
    
@@ -34,7 +34,7 @@ exports.login=(credentials)=>new Promise(async(resolve,error)=>{
     //here we will login
     try{
         let DbUser=await User.findOne({Email:credentials.Email}).exec()
-        console.log(DbUser)
+      
         if(DbUser){
          let password=DbUser.Password
          bcyrpt.compare(credentials.Password,password,function(err,result){

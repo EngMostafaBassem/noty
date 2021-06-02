@@ -1,4 +1,4 @@
-const NoteRepos=require("../Repos/Note.repos")
+const NoteRepos=require("../repos/Note")
 exports.MainPage=(req,res)=>{
     let userId=req.session._id
     let note=req.session.note
