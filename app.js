@@ -21,9 +21,12 @@ app.use(session({
   }))
 //setup Routes
 
+app.get("/",(req,res)=>{
+  res.send("test")
+})
 
-app.use(userRoutes)
-app.use(noteRoutes)
+//app.use(userRoutes)
+//app.use(noteRoutes)
 
 // MongoDB setup
 mongoose.connect('mongodb+srv://dbfcis:j4MQgkB76feFW7y@cluster0.a5rkl.mongodb.net/NoteDB?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
