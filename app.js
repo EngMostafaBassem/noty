@@ -20,8 +20,14 @@ app.use(session({
    
   }))
 //setup Routes
+
+app.get("/",(req,res)=>{
+  res.end("test")
+})
+/*
 app.use(userRoutes)
 app.use(noteRoutes)
+*/
 // MongoDB setup
 mongoose.connect('mongodb+srv://dbfcis:j4MQgkB76feFW7y@cluster0.a5rkl.mongodb.net/NoteDB?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 app.listen(process.env.PORT||3000)
