@@ -48,6 +48,9 @@ exports.login=(credentials)=>new Promise(async(resolve,error)=>{
          })
     
         }
+        else{
+            error("Invalid Username or password") 
+        }
     }catch(ex){
         resolve(error)
     }
