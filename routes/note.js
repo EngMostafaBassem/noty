@@ -1,6 +1,6 @@
 const noteRouter=require("express").Router()
 const noteController=require("../controllers/Note")
-const AuthMidlwares=require("../midlewares/Auth")
+const AuthMidlwares=require("../Midlewares/Auth")
 noteRouter.get("/main",AuthMidlwares.ValidAuth,noteController.MainPage)
 noteRouter.get("/getNote",AuthMidlwares.ValidAuth,noteController.GetNote)
 noteRouter.post("/saveNote",AuthMidlwares.ValidAuth,noteController.SaveNote)
