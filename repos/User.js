@@ -38,8 +38,8 @@ exports.login=(credentials)=>new Promise(async(resolve,error)=>{
         if(DbUser){
          let password=DbUser.Password
          bcyrpt.compare(credentials.Password,password,function(err,result){
+           if(err)  error(err)
            if(result){
-               if(err)  error(err)
                resolve(DbUser._id)
            }
            else{
