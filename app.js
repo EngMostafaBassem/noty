@@ -22,7 +22,7 @@ app.use(session({
 //setup Routes
 
 app.get("/",(req,res)=>{
-  res.end("test")
+  res.send("test")
 })
 /*
 app.use(userRoutes)
