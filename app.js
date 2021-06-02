@@ -8,7 +8,7 @@ const app=express()
 // initial setup
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use(express.static(path.join(__dirname,"public")))
+app.use(express.static(path.join(__dirname,"Public")))
 app.set('views', path.join(__dirname, '/Views'));
 app.set("view engine","ejs")
 
